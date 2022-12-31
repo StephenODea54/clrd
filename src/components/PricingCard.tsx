@@ -12,7 +12,7 @@ interface PricingCardProps {
 
 const PricingCard = ({ pricingInfo, equipment }: PricingCardProps) => {
   return (
-    <div className="w-full h-full bg-[radial-gradient(145.05%_100%_at_50%_0%,#292424_0%,#120c0c_57.38%,#2a2828_88.16%)] p-6 ring-1 ring-white/[0.15] sm:mx-0 sm:rounded-2xl sm:p-8 lg:p-10">
+    <div className="w-full h-full bg-[radial-gradient(145.05%_100%_at_50%_0%,#292424_0%,#120c0c_57.38%,#2a2828_88.16%)] p-6 ring-1 ring-white/[0.15] rounded-2xl sm:p-8 lg:p-10">
       <h3 className="text-lg font-semibold text-white">
         {pricingInfo.team}
       </h3>
