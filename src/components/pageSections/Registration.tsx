@@ -1,5 +1,6 @@
-import PricingCard from "../PricingCard";
-import { PricingInfo } from "../PricingCard";
+import PricingCard, { PricingInfo} from "../pageElements/PricingCard";
+import Hyperlink from "../pageElements/Hyperlink";
+import List from "../pageElements/List";
 
 const Registration = () => {
   const pricingInfo = {
@@ -50,6 +51,30 @@ const Registration = () => {
     },
   };
 
+  const paymentInfo = [
+    "Cash",
+    "Check",
+    "Debit/Credit Card",
+    <>
+      CashApp (
+        <Hyperlink
+          url={"https://cash.app/$CLRD2021/"}
+          text={"$CLRD2021"}
+          color={"lime"}
+        />
+      )
+    </>,
+    <>
+      Venmo (
+        <Hyperlink
+          url={"https://venmo.com/CLRD2021"}
+          text={"@CLRD2021"}
+          color={"sky"}
+        />
+      )
+    </>,
+  ];
+
   return(
     <section>
         <div className="bg-gradient-to-b from-gray-50 py-24 sm:py-40">
@@ -61,29 +86,20 @@ const Registration = () => {
               <p>
                 If you would like to get your child involved in the CLRD, please contact one of the board members,
                 coaches, or simply register online or in person. Online registration can be found at this{" "}
-                <a href="https://form.jotform.com/223624935475059">
-                  <span className="text-red-600 no-underline hover:text-red-300">link</span>
-                </a>
-                . Online registration is open all year. In person registration dates have not been set for the 2023 season, but are expected to be in late May or early June. <span className="font-bold">All registration fees for the 2023 season will be due July 24th.</span>
+                <Hyperlink
+                  url={"https://form.jotform.com/223624935475059"}
+                  text={"link"}
+                  color={"red"}
+                />
+                . Online registration is open all year. In person registration dates have not been set for the 2023 season, but are expected to be in late May or early June. {" "}
+                <span className="font-bold">
+                  All registration fees for the 2023 season will be due July 24th.
+                </span>
               </p>
               <p>We accept the following forms of payment:</p>
-              <ul className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
-                <li className="relative pl-6 before:absolute before:top-[calc(50%-1px)] before:left-0 before:h-[2px] before:w-3 before:bg-slate-300">
-                  Cash
-                </li>
-                <li className="relative pl-6 before:absolute before:top-[calc(50%-1px)] before:left-0 before:h-[2px] before:w-3 before:bg-slate-300">
-                  Check
-                </li>
-                <li className="relative pl-6 before:absolute before:top-[calc(50%-1px)] before:left-0 before:h-[2px] before:w-3 before:bg-slate-300">
-                  Debit/Credit Card
-                </li>
-                <li className="relative pl-6 before:absolute before:top-[calc(50%-1px)] before:left-0 before:h-[2px] before:w-3 before:bg-slate-300">
-                  CashApp (<a href="https://cash.app/$CLRD2021/"><span className="text-[#04c34e] hover:text-green-300">$CLRD2021</span></a>)
-                </li>
-                <li className="relative pl-6 before:absolute before:top-[calc(50%-1px)] before:left-0 before:h-[2px] before:w-3 before:bg-slate-300">
-                  VenMo (<a href="https://venmo.com/CLRD2021"><span className="text-[#008cff] hover:text-blue-300">@CLRD2021</span></a>)
-                </li>
-              </ul>
+              <List
+                elements={paymentInfo}
+              />
               <p>Below is a summary of the registration cost for each squad:</p>
             </div>
             <div className="mx-auto grid md:grid-cols-3 sm:grid-cols-1 md:grid-rows-1 sm:grid-rows-3 gap-8 place-items-center mt-24">

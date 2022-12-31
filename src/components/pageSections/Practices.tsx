@@ -1,3 +1,5 @@
+import Hyperlink from "../pageElements/Hyperlink";
+
 const Practices = () => {
   return(
     <section>
@@ -15,11 +17,11 @@ const Practices = () => {
               </p>
               <p>
                 You are also able to check each team's practice schedule, as well as the schedule for all things related to the organization, by clicking{" "}
-                <a href="https://calendar.google.com/calendar/u/0?cid=b2RlYXN0ZXBoZW4xQGdtYWlsLmNvbQ">
-                  <span className="text-red-600 no-underline hover:text-red-300">
-                    here
-                  </span>
-                </a>
+                <Hyperlink
+                  url={"https://calendar.google.com/calendar/u/0?cid=b2RlYXN0ZXBoZW4xQGdtYWlsLmNvbQ"}
+                  text={"here"}
+                  color={"red"}
+                />
                 .
               </p>
             </div>

@@ -1,3 +1,6 @@
+import BoldText from "../pageElements/BoldText";
+import Hyperlink from "../pageElements/Hyperlink";
+
 const About = () => {
   return(
     <section className="overflow-hidden py-24 sm:py-40">
@@ -8,12 +11,26 @@ const About = () => {
           </h2>
           <div className="space-y-8 text-lg leading-8 mt-16">
             <p className="text-2xl leading-10 tracking-tight text-slate-900">
-              The <span className="font-medium text-red-500">Campbell Little Red Devils</span> is a 501(c)(3)
+              The {" "}
+              <BoldText
+                text={"Campbell Little Red Devils"}
+              />
+              {" "} is a 501(c)(3)
               non-profit youth organization that offers kids in the community a chance to learn the fundamentals of
               Football and Cheerleading. Our league starts at kindergarten and continues through the sixth grade.
-              The teams are divided into three divisions: <span className="font-medium text-red-500">Bantam</span>,{" "}
-              <span className="font-medium text-red-500">Junior Varisty</span>, and{" "}
-              <span className="font-medium text-red-500">Varsity</span>.
+              The teams are divided into three divisions:{" "}
+              <BoldText
+                text={"Bantam"}
+              />
+              ,{" "}
+              <BoldText
+                text={"Junior Varsity"}
+              />
+              ,{" "}
+              <BoldText
+                text={"Varsity"}
+              />
+              .
             </p>
             <p>
               The Bantam team is kindergarten through second grade, and is flag football with only minimal contact. Scores are not kept for Bantam games and there are not any postseason opportunities. The reason for this is that we put a
@@ -21,9 +38,11 @@ const About = () => {
               the MVJFL are required to have Bantam teams, so it is likely that there will be gaps in the
               schedule due to scheduling opportunities. For more information on the rules for flag football, please
               visit {" "}
-              <a href="https://www.mvjflfootball.com/flag">
-                <span className="text-red-600 no-underline hover:text-red-300">this link</span>
-              </a>
+              <Hyperlink
+                url={"https://www.mvjflfootball.com/flag"}
+                text={"this link"}
+                color={"red"}
+              />
               .
             </p>
             <p>
@@ -31,9 +50,11 @@ const About = () => {
               squads are eligible to particpate in a post-season tournament. Eligibility for the tournament is based
               on record and first-half point totals. There are two tiers in the MVJFL, and each tier has their own
               separate rulebook. Click{" "}
-              <a href="https://www.mvjflfootball.com/lower-tier-rules">
-                <span className="text-red-600 no-underline hover:text-red-300">this link</span>
-              </a>{" "}
+              <Hyperlink
+                url={"https://www.mvjflfootball.com/lower-tier-rules"}
+                text={"this link"}
+                color={"red"}
+              />{" "}
               for a complete overview of all playing and eligibility rules for the lower-tier.
             </p>
             <p>
