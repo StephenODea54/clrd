@@ -27,34 +27,22 @@ const pricing = [
     id: 1,
     pricingInfo: {
       team: "Cheerleading",
-      price: 125,
+      price: 130,
       startingGrade: "1st",
       endingGrade: "6th",
     },
     equipment: [
       {
-        id: 2,
-        label: "Uniform",
-      },
-      {
-        id: 3,
+        id: 1,
         label: "Shoes",
       },
       {
-        id: 4,
+        id: 2,
         label: "Bows",
       },
       {
-        id: 5,
+        id: 3,
         label: "Socks",
-      },
-      {
-        id: 6,
-        label: "Spanks",
-      },
-      {
-        id: 7,
-        label: "Midriff",
       },
     ],
   },
@@ -68,27 +56,27 @@ const pricing = [
     },
     equipment: [
       {
-        id: 9,
+        id: 4,
         label: "Uniform",
       },
       {
-        id: 10,
+        id: 5,
         label: "Helmet",
       },
       {
-        id: 11,
+        id: 6,
         label: "Shoulder Pads",
       },
       {
-        id: 12,
+        id: 7,
         label: "Integrated Pants",
       },
       {
-        id: 13,
+        id: 8,
         label: "Socks",
       },
       {
-        id: 14,
+        id: 9,
         label: "Mouth Piece",
       },
     ],
